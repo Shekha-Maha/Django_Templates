@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Templates</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./images/logo.png" alt="" width="auto" height="40" class="d-inline-block align-text-top">
+            </a>
+
+            <button class="navbar-toggler navbar-toggle-light shadow-none border-0" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="sidebar offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <img src="./images/logo.png" alt="" width="auto" height="40" class="d-inline-block align-text-top">
+                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#">ORGANIZERS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">EVENTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn" href="#">CREATE EVENT</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+    <div class="HomePage" id="home">
+        <div class="container">
+
+            <!-- title Section -->
+            <div class="Title">
+                <h1>Event. Planning. Genius.</h1>
+                <div class="video-container">
+                    <video id="myVideo" src="yourVideo.mp4" autoplay loop muted></video>
+                    <!-- <button id="close">&times;</button> -->
+                </div>
+
+            </div>
+
+            <!-- Contact Form -->
+            <section class="ContactForm">
+                <div class="row">
+                    <div class="col-md-12 col-xl-7 order-xl-0 order-lg-1 order-md-1 order-sm-1 order-xs-1 order-1">
+                        <form class="needs-validation" novalidate>
+                            <h2 class="mb-5">Get Notified When We Launch</h2>
+                            <div class="firstInput mb-5 gap-4">
+                                <div class="form-group WidthName">
+                                    <label class="pb-3">First Name *</label>
+                                    <input type="text" class="form-control" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid (First Name).
+                                    </div>
+                                </div>
+                                <div class="form-group WidthName">
+                                    <label class="pb-3">Last Name *</label>
+                                    <input type="text" class="form-control" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid (Last Name).
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-5">
+                                <label class="pb-3">Email *</label>
+                                <input type="text" class="form-control" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid (Email).
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <label class="pb-1">Role *</label>
+                                <div class="SelectMenu" required>
+                                    <div class="SelectText">
+                                        <label>
+                                            <input type="radio" name="fav_language">
+                                            <span>Organizer/Promoter</span>
+                                        </label>
+                                    </div>
+                                    <div class="SelectText">
+                                        <label>
+                                            <input type="radio" name="fav_language">
+                                            <span>Venue</span>
+                                        </label>
+                                    </div>
+                                    <div class="SelectText">
+                                        <label>
+                                            <input type="radio" name="fav_language">
+                                            <span>Event Coordinator</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group my-5">
+                                <label class="pb-3">Feature Requests (Optional)</label>
+                                <textarea class="form-control BorderRadius" id="exampleFormControlTextarea1" rows="5"
+                                    required></textarea>
+                                <div class="invalid-feedback">
+                                    Please provide a valid (Feature Requests).
+                                </div>
+                            </div>
+
+                            <button class="btn" type="submit">Submit</button>
+                        </form>
+                    </div>
+
+                    <div
+                        class="col-md-12 col-xl-5 d-flex justify-content-end align-items-end order-xl-1 order-lg-0 order-md-0 order-sm-0 order-0">
+                        <div class="PerksSection">
+                            <h4 class="text-center">PERKS of Signing Up</h4>
+
+                            <div class="item-1 mb-4">
+                                <img src="./images/calander.png" alt="">
+                                <p><span>FREE</span> Event Listing — set up for you on the house</p>
+                            </div>
+                            <div class="item-1">
+                                <img src="./images/Clip-path-group.png" style="width: 26px;" alt="">
+                                <p><span>FREE</span> Reusable Seating Chart — created for you on the house (dynamic and
+                                    fully integrated for events with reserved seating)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section class="stackedPhotoSection">
+                <div class="row">
+                    <div class="col">
+                        <div class="stackedContent">
+                            <div class="stackedPhoto1" data-aos="fade-down">
+                                <img src="./images/stackedPhoto1.png" alt="">
+                            </div>
+                            <div class="stackedTitle">
+                                <h1 data-aos="fade-down">Create your events with ease.</h1>
+                                <p class="lgDisplay" data-aos="fade-down">We’ve developed an incredible User Experience with both the
+                                    Customer and Organizer in
+                                    mind.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="stackedPhoto2 d-lg-block d-md-none d-sm-none d-none" data-aos="fade-right">
+                            <img src="./images/stackedPhoto2.png" alt="">
+                        </div>
+                        <div class="stackedPhoto2 d-lg-none d-md-block" data-aos="fade-down">
+                            <img src="./images/stackedPhoto2.png" alt="">
+                        </div>
+                        
+                        <div class="stackedPhoto3 d-lg-block d-md-none d-sm-none d-none" data-aos="fade-down">
+                            <img src="./images/stackedPhoto3.png" alt="">
+                        </div>
+                        <div class="stackedPhoto3 d-lg-none d-md-block" data-aos="zoom-in-down">
+                            <img src="./images/stackedPhoto3.png" alt="">
+                        </div>
+
+                        <p class="mgDisplay" data-aos="fade-down">We’ve developed an incredible User Experience with both the
+                            Customer and Organizer in
+                            mind.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Table -->
+            <section class="TableSection" data-aos="fade-up">
+                <div class="TableContent">
+                    <table class="Customers">
+                        <tr>
+                            <th>Features</th>
+                            <th>Event Visionary</th>
+                            <th class="px-5">Eventbrite</th>
+                        </tr>
+                        <tr>
+                            <td>Sell Tickets</td>
+                            <td><img src="./images/rightarrow.png" alt=""></td>
+                            <td><img src="./images/rightarrow.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td>Create and List Events</td>
+                            <td><img src="./images/rightarrow.png" alt=""></td>
+                            <td><img src="./images/rightarrow.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td class="Padding">Easily Create Dynamic Seating Chart</td>
+                            <td><img src="./images/rightarrow.png" alt=""></td>
+                            <td><img src="./images/crosarrow.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td>Reuse Dynamic Seating Charts</td>
+                            <td><img src="./images/rightarrow.png" alt=""></td>
+                            <td><img src="./images/rightarrow.png" alt=""></td>
+                        </tr>
+
+                        <tr>
+                            <td>Run SMS Campaigns</td>
+                            <td><img src="./images/rightarrow.png" alt=""></td>
+                            <td><img src="./images/crosarrow.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td>Support</td>
+                            <td><img src="./images/rightarrow.png" alt=""></td>
+                            <td><img src="./images/rightarrow.png" alt=""></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row d-flex justify-content-center align-items-ceter">
+                    <div class="col-12 mb-5">
+                        <h1 class="pb-5 text-dark text-center">Join our mailing list</h1>
+
+                        <div class="search-container">
+                            <input type="text" placeholder="@gmail.com">
+                            <button type="submit">Sign up</button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="col-lg-4 col-md-12 mt-5 Address order-xl-0 order-lg-0 order-md-2 order-sm-2 order-xs-2 order-2">
+                        <div>
+                            <img src="./images/footerlogo.png" class="mb-3" alt="">
+                            <p class="mb-2">support@eventvisionary.com</p>
+                            <p>Event Visionary, LLC</p>
+                            <p>30 N Gould St, Ste R,</p>
+                            <p>Sheridan, WY 82801</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mt-5 order-1 order-lg-1 text-center">
+                        <h4>Quick Links</h4>
+                        <span>Home</span>
+                        <span>About</span>
+                        <span>Create an Event</span>
+                        <span>Organizer Dashboard</span>
+                        <span>Pricing</span>
+                        <span>Privacy Policy</span>
+                        <span>Terms and Conditions</span>
+                    </div>
+                    <div
+                        class="col-lg-4 col-md-12 mt-5 d-flex justify-content-center order-xl-1 order-lg-2 order-md-0 order-sm-0 order-0">
+                        <div class="text-center">
+                            <h4>Follow Us</h4>
+                            <button class="Button"><i class="fa-brands fa-square-facebook"></i></button>
+                            <button class="Button"><i class="fab fa-instagram"></i></button>
+                            <button class="Button"><i class="fab fa-twitter"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 1000,
+        });
+    </script>
+</body>
+
+</html>
